@@ -18,21 +18,21 @@ def main():
 
     # Uses loop to get amount of numbers from user.
     while num_amount != "2" and num_amount != "3":
-        num_amount = input("Enter num_amount: ")
+        num_amount = input(" ")
         if num_amount != "2" and num_amount != "3":
             print("Please enter 2 or 3!")
 
     # Gets numbers as strings from user.
-    num_str_1 = input("Enter num_str_1: ")
+    num_str_1 = input("Enter first number: ")
     try:
         num_int_1 = int(num_str_1)
-        num_str_2 = input("Enter num_str_2: ")
+        num_str_2 = input("Enter second number: ")
         try:
             num_int_2 = int(num_str_2)
 
             # Extra functionality - GCF of 3 numbers if wanted.
             if num_amount == "3":
-                num_str_3 = input("Enter num_str_3: ")
+                num_str_3 = input("Enter third number: ")
                 try:
                     num_int_3 = int(num_str_3)
                     # Uses loop to calculate greatest common factor.
@@ -51,7 +51,7 @@ def main():
                     # Displays greatest common factor.
                     print(f"The greatest common factor is {gcf}.")
                 except ValueError:
-                    print(f"{num_str_3} is not a number.")
+                    print(f"{num_str_3} is not an integer.")
             else:
                 # Uses loop to calculate greatest common factor.
                 while counter <= num_int_1 and counter <= num_int_2:
@@ -61,9 +61,9 @@ def main():
                 # Displays greatest common factor.
                 print(f"The greatest common factor is {gcf}.")
         except ValueError:
-            print(f"{num_str_2} is not a number.")
+            print(f"{num_str_2} is not an integer.")
     except ValueError:
-        print(f"{num_str_1} is not a number.")
+        print(f"{num_str_1} is not an integer.")
 
 
 if __name__ == "__main__":
